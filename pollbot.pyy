@@ -1,0 +1,30 @@
+from telegram import Bot
+import asyncio
+
+TOKEN = "8629855258:AAE5VY50Kn92ISs1boi5nTkPDiAkkZxhdKo"
+CHANNEL_ID = "-1004365437670"
+
+QUESTION = "ready ho public session ke liye?"
+
+OPTIONS = [
+    ("🔥 yes ", 72),
+    ("👍 no ", 18),
+    
+]
+
+async def main():
+    bot = Bot(8629855258:AAE5VY50Kn92ISs1boi5nTkPDiAkkZxhdKo)
+
+    text = f"🧪 DEMO POLL\n\n🗳️ {QUESTION}\n\n"
+
+    for option, votes in OPTIONS:
+        text += f"{option} — {votes} votes\n"
+
+    text += "\n⚠️ Ye demo/sample poll hai."
+
+    await bot.send_message(
+        chat_id=CHANNEL_ID,
+        text=text
+    )
+
+asyncio.run(main())
